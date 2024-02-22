@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css/style.css">
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Login</title>
-       
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-    <div class="item" id="Item">
-     <p th:if="${result}">[[${result}]]</p>
-   	</div>
-    
-        <h4>Login to your account</h4>
-        <form action="/validate" method="post">
-          
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="example123" required>
-            </div>
-            <div class="form-group-box">
-            <input type="checkbox" id="checkbox" name="checkbox" required>
-            <p class="checkbox">Remember me</p>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login"><br>
-                <p id="mas">New to MyApp? <a href="#">signup</a></p>
-            </div>
-        </form>
+      <div class="item" id="Item">
+        <p th:if="${result}">[[${result}]]</p>
+      </div>
+
+      <h4>Login to your account</h4>
+      <form action="/validate" method="post">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="example123"
+            required
+          />
+        </div>
+        <div class="form-group-box">
+          <input type="checkbox" id="checkbox" name="checkbox" required />
+          <p class="checkbox">Remember me</p>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login" /><br />
+          <p id="mas">New to MyApp? <a href="index">signup</a></p>
+        </div>
+      </form>
     </div>
     <script th:src="@{/javascript/script.js}"></script>
-</body>
+  </body>
 </html>
