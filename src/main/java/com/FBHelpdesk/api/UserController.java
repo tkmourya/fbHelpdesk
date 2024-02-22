@@ -72,40 +72,6 @@ public class UserController {
  		}
  	}
 
-
-//@PostMapping("/adminValidate")
-//	public String adminValidate(@RequestParam("email") String email,
-//         				@RequestParam("password") String password,Model model) {
-//		if(us.checkEmail(email)) {
-//			
-//		boolean val=us.validate(email, password);
-//		//if user is valid
-//		if(val==true){
-//			if(us.getAdminEmail(email).equals("dev_tk@ubuildo.com")) {
-//				System.out.println("admin_login successfull!");
-//			return "signup";
-//			}
-//			else {
-//				String result = us.loginExists();
-//		         model.addAttribute("result", result);
-//					System.out.println("incorrect credentials, try again!");
-//					return "adminlogin";
-//			}
-//			
-//			}
-//		else {
-//			String result = us.loginExists();
-//         model.addAttribute("result", result);
-//			System.out.println("incorrect credentials, try again!");
-//			return "adminlogin";
-//		}
-//		
-//	}else {
-//		String result = us.loginExists();
-//    model.addAttribute("result", result);
-//			return "adminlogin";
-//		}
-//	}
 	
 
 }
